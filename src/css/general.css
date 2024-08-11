@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/poppins-regular.ttf') format('truetipe');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/poppins-medium.ttf') format('truetipe');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/poppins-semibold.ttf') format('truetipe');
+}
+
+a {
+  cursor: pointer;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .container {
+    max-width: 768px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
