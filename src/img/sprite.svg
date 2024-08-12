@@ -1,10 +1,10 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="icon-left" viewBox="0 0 23 32">
-<path fill="#404b52" style="fill: var(--color1, #404b52)" d="M13.422 29.221l-12.617-12.453 12.617-12.453h7.899l-12.672 12.453 12.672 12.453h-7.899z"></path>
+<path  d="M13.422 29.221l-12.617-12.453 12.617-12.453h7.899l-12.672 12.453 12.672 12.453h-7.899z"></path>
 </symbol>
 <symbol id="icon-right" viewBox="0 0 23 32">
-<path fill="#404b52" style="fill: var(--color1, #404b52)" d="M1.573 4.315h7.899l12.617 12.453-12.617 12.453h-7.899l12.672-12.453-12.672-12.453z"></path>
+<path  d="M1.573 4.315h7.899l12.617 12.453-12.617 12.453h-7.899l12.672-12.453-12.672-12.453z"></path>
 </symbol>
 <symbol id="icon-dashboard" viewBox="0 0 32 32">
 <path class="stroke-only" fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M12 29.333h8c6.667 0 9.333-2.667 9.333-9.333v-8c0-6.667-2.667-9.333-9.333-9.333h-8c-6.667 0-9.333 2.667-9.333 9.333v8c0 6.667 2.667 9.333 9.333 9.333z"></path>
@@ -61,6 +61,15 @@
 </symbol>
 <symbol id="icon-chevron-right" viewBox="0 0 32 32">
 <path fill="none" class="stroke-only" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M12 24l8-8-8-8"></path>
+</symbol>
+<symbol id="icon-burger" viewBox="0 0 64 32">
+<title>burger</title>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M56 20.667h-48"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4" d="M56 10h-48"></path>
+</symbol>
+<symbol id="icon-x-black" viewBox="0 0 32 32">
+<title>x-black</title>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M22.667 9.333l-13.333 13.333M9.333 9.333l13.333 13.333"></path>
 </symbol>
 </defs>
 </svg>

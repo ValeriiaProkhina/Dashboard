@@ -1,12 +1,24 @@
-.dashboard {
-  max-width: 200px;
-  margin: 0;
-  padding: 20px 16px 36px 16px;
+.dashboard__menu-container {
+  max-width: 286px;
+  padding: 26px 18px 66px 18px;
   box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
   background: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 99999999;
+  flex-shrink: 0;
+  transform: translateX(-100%);
+  transition: transform 250ms ease-in;
+  overflow: hidden;
+}
+.dashboard__menu-container.is-open {
+  transform: translateX(0%);
 }
 .dashboard__sidebar {
   height: 100%;
@@ -14,6 +26,7 @@
   flex-direction: column;
 }
 .dashboard__logo {
+  position: relative;
   min-width: 200px;
   display: flex;
   gap: 8px;
@@ -52,21 +65,27 @@
   border-radius: 8px;
   padding: 11px;
   width: 100%;
-  transition: background 300ms ease-in;
+  transition: background 300ms ease-in, transform 300ms ease-in;
 }
-.dashboard__nav-item:hover,
+.dashboard__nav-text {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: #9197b3;
+}
+.dashboard__nav-item:hover {
+  background-color: rgba(89, 50, 234, 0.3);
+  transform: scale(1.04);
+}
 .dashboard__nav-item:focus {
   background: #5932ea;
 }
-.dashboard__nav-item:hover .fill-only,
 .dashboard__nav-item:focus .fill-only {
   fill: #fff;
 }
-.dashboard__nav-item:hover .stroke-only,
 .dashboard__nav-item:focus .stroke-only {
   stroke: #fff;
 }
-.dashboard__nav-item:hover .dashboard__nav-text,
 .dashboard__nav-item:focus .dashboard__nav-text {
   color: #fff;
 }
@@ -110,20 +129,44 @@
   letter-spacing: 0.01em;
   color: #757575;
 }
+
+.dashboard__close-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  stroke: #000;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 0;
+  line-height: 0;
+  transition: transform 300ms ease-in, stroke 300ms ease-in,
+    background-color 300ms ease-in;
+}
+
+.dashboard__close-btn:hover,
+.dashboard__close-btn:focus {
+  background-color: rgba(89, 50, 234, 0.3);
+  stroke: #fff;
+  transform: scale(1.15);
+}
+
 @media (min-width: 768px) {
-  .dashboard {
-    max-width: 286px;
-    padding: 26px 18px 66px 18px;
-  }
   .dashboard__logo-icon {
     width: 37px;
     height: 37px;
   }
+  .dashboard__logo-text {
+    font-size: 24px;
+  }
 }
 @media (min-width: 1440px) {
-  .dashboard {
-    max-width: 306px;
+  .dashboard__menu-container {
+    width: 306px;
     padding: 36px 28px 76px 28px;
+    overflow: visible;
+    transform: translateX(0%);
+    position: static;
   }
   .dashboard__logo {
     margin-bottom: 64px;
@@ -133,5 +176,42 @@
   }
   .dashboard__list {
     gap: 40px;
+  }
+  .dashboard__close-btn {
+    display: none;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .dashboard__logo-icon {
+    animation: rotate 2000ms linear infinite;
+    opacity: 0;
+    transform: scale(0);
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .dashboard__logo-text {
+    opacity: 0;
+    animation: fadeIn 500ms ease-out forwards;
+    animation-delay: 500ms;
+  }
+  .dashboard__logo-version {
+    opacity: 0;
+    font-size: 0.7em;
+    animation: fadeIn 500ms ease-out forwards;
+    animation-delay: 500ms;
   }
 }
