@@ -3,9 +3,10 @@
   max-width: 1135px;
   flex-grow: 1;
   position: relative;
-  padding: 128px 30px 100px 30px;
+  padding: 128px 10px 40px 10px;
   background-color: #f9fbff;
   margin: 0 auto;
+  overflow: hidden;
 }
 .dashboard__header-title {
   position: absolute;
