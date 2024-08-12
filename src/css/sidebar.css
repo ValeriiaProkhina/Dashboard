@@ -165,7 +165,7 @@
     padding: 36px 28px 76px 28px;
     overflow: visible;
     transform: translateX(0%);
-    position: static;
+    position: fixed;
   }
   .dashboard__logo {
     margin-bottom: 64px;

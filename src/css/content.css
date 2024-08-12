@@ -244,7 +244,7 @@
   }
   .dashboard__content-container {
     padding: 128px 95px 258px 71px;
-    margin: 0;
+    margin: 0 306px 0;
   }
   .pagination__container {
     display: flex;
